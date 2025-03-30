@@ -16,8 +16,8 @@
     image cg_garden = "SliceOfJamCGGarden.png"
     image cg_gay = "CG.png"
     image cg_knight_duel = "knightfighting.png"
-    image cg_princess_on_throne = "SliceOfJamCGThroneRefuse.png"
-    image cg_princess_on_throne_v2 = "SliceOfJamCGThroneKill.png"
+    image cg_princess_on_throne_v2 = "SliceOfJamCGThroneRefuse.png"
+    image cg_princess_on_throne = "SliceOfJamCGThroneKill.png"
 
     # Assassin sprites
     image assassin_neutral = "assassin_neutral.png"
@@ -532,10 +532,9 @@ label task7_kill_king:
     show princess_cheerful at center
     p "Oh, my. Thank you!"
     hide princess_cheerful
-    show cg_princess_on_throne with dissolve
+    show cg_princess_on_throne_v2 with dissolve
     "She sits on the throne—it appears as though it has always belonged to her. This is her rightful place."
     "You kneel."
-    "If you have refused any of her commands, go to Ending 0. Otherwise, go to Ending 3."
     jump ending3
 
 label task7_refuse:
