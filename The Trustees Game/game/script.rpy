@@ -21,7 +21,7 @@
 
     # Assassin sprites
     image assassin_neutral = "assassin_neutral.png"
-    image assassin_fearful = "assassin_fearful.png"
+    image assassin_fearful = "assassin_scared.png"
 
     # Princess sprites 
     image princess_neutral = "princess_neutral.png"
