@@ -220,7 +220,8 @@ label task3_head_out:
     "She sends you a warm smile, before you bow to her and leave." 
     hide princess_neutral
     show princess_cheerful at center
-    "You see her hold up the pelt, pleased at your offering." 
+    "You see her hold up the pelt, pleased at your offering."
+    jump task4_intro
 
 label task3_stay_home:
     scene bg_black
@@ -446,6 +447,7 @@ label task6_execute:
     scene bg_princess_room_night
     show assassin_fearful at center
     a "You can’t be serious-!"
+    hide assassin_fearful
     "You quickly dispatch the Assassin."
     h "The danger is gone, Your Highness."
     show princess_neutral at center
@@ -454,11 +456,12 @@ label task6_execute:
     h "… What should we do about the assassin?"
     show princess_cheerful at center
     p "Don’t worry. I’ll send for a maid to clean up the mess. You should get some rest."
-    "You look at the assassin’s body. Calling it a mess seems dismissive. Besides, another thought nags at you…"
     hide princess_cheerful
+    "You look at the assassin’s body. Calling it a mess seems dismissive. Besides, another thought nags at you…"
     h "Isn’t this against the law? I was supposed to bring her to court."
     show princess_cheerful at center
     p "Don’t worry about that, Hawthorn! This was the best choice. Who knows if she would have tried again if you left her alone."
+    hide princess_cheerful
     "You suppose she is right."
     show princess_neutral at center
     p "You did the right thing."
@@ -533,7 +536,6 @@ label task7_kill_king:
     show cg_princess_on_throne with dissolve
     "She sits on the throne—it appears as though it has always belonged to her. This is her rightful place."
     "You kneel."
-    "If you have refused any of her commands, go to Ending 0. Otherwise, go to Ending 3."
     jump ending3
 
 label task7_refuse:
@@ -555,7 +557,7 @@ label task7_refuse:
     show princess_bloodied at center
     p "Move aside."
     hide princess_bloodied
-    show cg_princess_on_throne with dissolve
+    show cg_princess_on_throne_v2 with dissolve
     p "Hawthorn, I thought you would be more loyal than this."
     jump determine_ending
 
