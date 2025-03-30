@@ -16,8 +16,8 @@
     image cg_garden = "SliceOfJamCGGarden.png"
     image cg_gay = "CG.png"
     image cg_knight_duel = "knightfighting.png"
-    image cg_princess_on_throne = "SliceOfJamCGThroneRefuse.png"
-    image cg_princess_on_throne_v2 = "SliceOfJamCGThroneKill.png"
+    image cg_princess_on_throne_v2 = "SliceOfJamCGThroneRefuse.png"
+    image cg_princess_on_throne = "SliceOfJamCGThroneKill.png"
 
     # Assassin sprites
     image assassin_neutral = "assassin_neutral.png"
@@ -454,7 +454,8 @@ label task6_execute:
     h "… What should we do about the assassin?"
     show princess_cheerful at center
     p "Don’t worry. I’ll send for a maid to clean up the mess. You should get some rest."
-    "You look at the assassin’s body. Calling it a mess seems dismissive. Besides, another thought nags at you…"
+      "You look at the assassin’s body. Calling it a mess seems dismissive. Besides, another thought nags at you…"
+    hide princess_cheerful
     h "Isn’t this against the law? I was supposed to bring her to court."
     show princess_cheerful at center
     p "Don’t worry about that, Hawthorn! This was the best choice. Who knows if she would have tried again if you left her alone."
@@ -476,6 +477,7 @@ label task6_arrest:
     p "It would have been quicker to kill her right here and now."
     p "She would have been executed for treason, anyway, and the trial will just waste everyone’s time."
     h "But the law…"
+    hide princess_disapproving
     show princess_neutral at center
     p "You would be following the law. Just a little… faster."
     hide princess_neutral
