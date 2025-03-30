@@ -41,7 +41,6 @@ label start:
     $ no_task1 = False
 
     scene bg_black
-    centered "Introduction Scene"
     "You are Hawthorn, a knight in the employ of Princess Primrose. With your skills, and a little bit of luck, you’ve been appointed as her personal knight."
     "Princess Primrose is considered a beloved Princess by the people, but you’ve never spoken to her before. It might be a little nerve wracking, but she’s the only heir to this Kingdom. Better not mess this up!"
     jump task1
