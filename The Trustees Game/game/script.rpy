@@ -30,6 +30,9 @@
     image princess_knife = "princess_knife.png"
     image princess_bloodied = "princess_bloodied.png"
 
+    # Hawthorn
+    image hawthron_netural = "knight_neutral.png"
+
     # Character definitions
     define p = Character("Princess Primrose")
     define h = Character("Hawthorn")
@@ -41,8 +44,10 @@ label start:
     $ no_task1 = False
 
     scene bg_black
+    show hawthron_netural at center
     "You are Hawthorn, a knight in the employ of Princess Primrose. With your skills, and a little bit of luck, you’ve been appointed as her personal knight."
     "Princess Primrose is considered a beloved Princess by the people, but you’ve never spoken to her before. It might be a little nerve wracking, but she’s the only heir to this Kingdom. Better not mess this up!"
+    hide hawthron_netural
     jump task1
 
 # --------------------------
@@ -88,6 +93,7 @@ label task1_garden:
     scene bg_garden
     show princess_cheerful at center
     p "Thank you for spending your time with me. I hope you had as good a time as I did!"
+    hide princess_cheerful
     show princess_neutral at center
     p "I have to get back to my duties now… Oh well. All good things must end."
     hide princess_neutral
@@ -177,15 +183,69 @@ label task2_ignore:
 # Task 3
 # --------------------------
 label task3_intro:
-    # (Task 3 code goes here; using jump task4_intro as placeholder)
-    jump task4_intro
+    scene bg_black
+    "Even though you’ve gotten more accustomed to being called on at random by the Princess, today there is no one in her bedroom when you arrive."
+    "Not that it is strange, after all. She could just be at court, speaking with friends, or any number of activities."
+    "But, just like your first day on the job, there is a letter addressed to you on her desk."
+    scene bg_princess_room_day
+    l "Dearest Hawthorn,"
+    l "My apologies for being unable to greet you this morning! The court is in a fuss at the moment with the arrival of a beast to the East."
+    l "Now isn’t that something! I thought that our borders were safe, but it seems not."
+    l "This could pose a big problem to those on the outskirts, so I would like to send you and some other knights to head out and slay it."
+    l "Yours, Princess Primrose."
+    menu: 
+        "Head Out With the Squadron":
+            jump task3_head_out
+        "Stay At Home":
+            jump task3_stay_home
+
+label task3_head_out:
+    scene bg_black
+    "This is what you’ve been training for! Heading out with the squadron, you feel as though you are making a difference." 
+    "The fight is difficult, but not impossible. With your squadron at your side, you are able to pierce the heart of the beast after a struggle."
+    "In order to prove your victory to the Princess, you take the pelt of the beast as your prize."
+    scene bg_princess_room_night
+    show princess_neutral at center
+    p "Welcome back, my knight! Are you unharmed?"
+    "You present Princess Primrose with your prize and proof."
+    hide princess_neutral
+    show princess_cheerful at center
+    p "Goodness! What a beautiful pelt. I am sure my seamstress will make a fine piece of clothing with this… "
+    p "Thank you, Hawthorn!"
+    hide princess_cheerful
+    show princess_neutral at center
+    p "The border villagers thank you for your service. You must be tired."
+    p "Make sure to rest well, and get treated for any injuries you sustained."
+    "She sends you a warm smile, before you bow to her and leave." 
+    hide princess_neutral
+    show princess_cheerful at center
+    "You see her hold up the pelt, pleased at your offering." 
+
+lable task3_stay_home
+    scene bg_black
+    "That sounds dangerous, you decide, and so you stay at home. The Princess is too busy to check if you went, you think, so there’s no danger in skipping!"
+    "From what you hear, it was a good call. Many of the knights who headed out came back injured, though the beast was successfully slain." 
+    "Unfortunately, because of how difficult the fight was, there’s no proof."
+
+    scene bg_princess_room_night
+    show princess_neutral at center
+    p "How did the fight go?"
+    h "..."
+    hide princess_neutral
+    show princess_cheerful at center
+    p "Just kidding! I read the report. Your name is strangely missing."
+    hide princess_cheerful
+    show princess_disapproving at center
+    p "ithout your help, there were a great many casualties."
+    p "You have your responsibilities, you know. You were supposed to help the fight against the beast."
+    p "Being my escort knight isn’t just fun and games."
 
 # --------------------------
 # Task 4
 # --------------------------
 label task4_intro:
     scene bg_black
-    "Day 4"
+    "Day 4" at center
     "There is never truly peace in the palace, but lately the chaos has been more intense."
     "Being the escort knight of Princess Primrose, you soon learn that she and a noble have been feuding. While she claims he’s undermined her authority, he denies it."
     "It’s inevitable that you will be drawn into the conflict."
@@ -208,7 +268,6 @@ label task4_accept:
     show cg_knight_duel with dissolve
     "You and your opponent clash fiercely. You are better trained, better geared, and in higher spirits."
     "As you fight, you spot an opening. You raise your sword and..."
-    "FLASH!"
     scene bg_black
     "The knight you dueled is mortally wounded. Your strike was true—he’s left for dead."
     "Their blood is on your hands."
@@ -245,25 +304,27 @@ label task5_intro:
     "You approach the throne, kneeling a few paces before her."
     "She stands, ordering you to lift your head and face her."
     "As you follow her command, she covers her soft laugh as you see her beautiful face smile down upon you. Just as she opens her mouth to speak, a glint catches the corner of your eye —"
-    "BANG BANG BANG"
+    "BANG BANG BANG!"
     "Your eyes snap open."
     "Messenger (no sprite): Knight Hawthorn! You have an urgent summons from the Princess!"
     "Instinctively, you toss the bed sheets aside and start putting on your gear, replaying what little you remember of your dream over and over in your mind."
     scene bg_princess_room_day
-    show princess_worried at center
+    show  princess_sad at center
     p "This is not how it’s supposed to go…"
-    hide princess_worried
+    hide  princess_sad
     show princess_neutral at center
     p "Hawthorn! At last, you’ve finally arrived!"
-    hide princess_neutral
     p "I’m sorry to call you so early in the morning, but there’s been some trouble in the Kingdom."
+    hide princess_neutral
+    show princess_sad at center
     p "Even though I worked so hard on the revisions, it seems my policies are still not popular with the people."
     p "My informants tell me that the peasantry have decided to rise up and stage a rebellion against the Crown."
     p "I tried so hard…"
+    hide princess_sad
     show princess_disapproving at center
     p "Even if they are unhappy with the results, they are causing chaos and destruction."
-    hide princess_disapproving
     p "They must be stopped as soon as possible, or else they might reach the capital."
+    hide princess_disapproving
     show princess_neutral at center
     p "Hawthorn, I would like you to head out and lead the force against them."
     p "For the good of the Kingdom."
@@ -285,17 +346,17 @@ label task5_quell:
     scene bg_princess_room_night
     show princess_cheerful at center
     p "Hawthorn! I’ve heard the good news. You’ve successfully dealt with all the insurgents."
-    hide princess_cheerful
+    
     p "Congratulations! A celebration must be in order."
-    p "Princess, I…"
-    show princess_worried at center
+    hide princess_cheerful
+    h "Princess, I…"
+    show  princess_sad at center
     p "Hawthorn, is everything alright? You look a little sad."
-    hide princess_worried
-    p "I wasn’t able to protect the people while I fought the rebellion."
-    p "People died."
-    p "…"
+    h "I wasn’t able to protect the people while I fought the rebellion."
+    h "People died."
+    hide  princess_sad
     show princess_neutral at center
-    p "…"
+    p "..."
     hide princess_neutral
     show princess_cheerful at center
     p "Is that it? Oh, Hawthorn, you worry too much!"
@@ -376,7 +437,6 @@ label task6_execute:
     scene bg_princess_room_night
     show assassin_fearful at center
     a "You can’t be serious-!"
-    "FLASH OF RED"
     "You quickly dispatch the Assassin."
     h "The danger is gone, Your Highness."
     show princess_neutral at center
@@ -432,7 +492,7 @@ label task7_intro:
     "Concerned, you rush to the Throne Room."
     scene bg_throne_room
     show princess_neutral at center
-    p "Hawthorn, you are loyal to me, right?"
+    p "Hawthorn, you are loyal to me, right?
     hide princess_neutral
     p "This is the most important task I have for you so far."
     p "There is much I need to do. And for that, I need the throne."
@@ -447,7 +507,7 @@ label task7_intro:
 label task7_kill_king:
     scene bg_black
     "There is no need to hesitate. You rush to the throne, draw your sword, and in one swift motion, the King's head is severed cleanly."
-    "RED FLASH"
+
     "He is no more. It almost feels too easy."
     scene bg_throne_room
     show princess_neutral at center
@@ -475,7 +535,6 @@ label task7_refuse:
     show princess_knife at center
     p "I suppose I have to do everything myself."
     hide princess_knife
-    "FLASH!"
     show princess_bloodied at center
     p "Long live the King, and all that. Hawthorn! Clean this up."
     hide princess_bloodied
