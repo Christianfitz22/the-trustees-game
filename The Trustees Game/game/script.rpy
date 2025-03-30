@@ -28,7 +28,7 @@
     image princess_cheerful = "princess_happy.png"
     image princess_disapproving = "princess_disapproving.png"
     image princess_knife = "princess_knife.png"
-    image princess_bloodied = "princess_knife_bloodied.png"
+    image princess_bloodied = "princess_knife_blood.png"
 
     # Hawthorn
     image hawthorn_netural = "knight_neutral.png"
@@ -550,7 +550,7 @@ label task7_refuse:
     show princess_bloodied at center
     p "Move aside."
     hide princess_bloodied
-    show cg_princess_on_throne_v2 with dissolve
+    show cg_princess_on_throne with dissolve
     p "Hawthorn, I thought you would be more loyal than this."
     jump determine_ending
 
