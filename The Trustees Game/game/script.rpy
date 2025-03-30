@@ -222,7 +222,7 @@ label task3_head_out:
     show princess_cheerful at center
     "You see her hold up the pelt, pleased at your offering." 
 
-lable task3_stay_home
+label task3_stay_home
     scene bg_black
     "That sounds dangerous, you decide, and so you stay at home. The Princess is too busy to check if you went, you think, so there’s no danger in skipping!"
     "From what you hear, it was a good call. Many of the knights who headed out came back injured, though the beast was successfully slain." 
@@ -403,7 +403,7 @@ label task6_intro:
     show assassin_neutral at right
     show princess_disapproving at left
     "You catch the intruder just as he stands over the sleeping Princess with a dagger in hand."
-    "You shout, startling the Princess awake and catching the assassin off guard. Before he can strike again, you intercept his dagger with your sword."
+    "You shout, startling the Princess awake and catching the assassin off guard. Before he can strike again, you intercept her dagger with your sword."
     "A duel ensues, the clashing of metal filling the room as the Princess watches with a detached air."
     show assassin_fearful at right
     "At last, your training and faith prove strong enough—you triumph over the intruder."
