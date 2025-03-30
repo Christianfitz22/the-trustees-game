@@ -67,7 +67,7 @@ label task1_read_letter:
     l "Yours, Princess Primrose."
     l "It’s signed off with the Princess’ personal seal."
     menu:
-        "Choice:"
+        "Choice:":
             "Go to the Garden":
                 jump task1_garden
             "Ignore her command":
@@ -133,7 +133,7 @@ label task2_intro:
     p "…Might you stay with me while I deal with the situation?"
     hide princess_neutral
     menu:
-        "Choice:"
+        "Choice:":
             "Stay With Her":
                 jump task2_stay
             "Ignore Her Request":
@@ -201,7 +201,7 @@ label task4_intro:
     l "We have agreed on a duel to settle this honorably. As my escort knight, I have nominated you to represent me. I should hope you will not disappoint."
     l "Yours, Princess Primrose."
     menu:
-        "Choice:"
+        "Choice:":
             "Accept the Nomination":
                 jump task4_accept
             "Refuse the Nomination":
@@ -275,7 +275,7 @@ label task5_intro:
     p "For the good of the Kingdom."
     hide princess_neutral
     menu:
-        "Choice:"
+        "Choice:":
             "Quell the rebellion":
                 jump task5_quell
             "Ignore the rebellion":
@@ -370,7 +370,7 @@ label task6_intro:
     p "Please."
     hide princess_neutral
     menu:
-        "Choice:"
+        "Choice:":
             "Execute the Assassin":
                 jump task6_execute
             "Arrest the Assassin":
@@ -446,7 +446,7 @@ label task7_intro:
     p "There is much I need to do. And for that, I need the throne."
     p "Kill the king, my knight."
     menu:
-        "Choice:"
+        "Choice:":
             "Kill the King":
                 jump task7_kill_king
             "Refuse":
@@ -515,7 +515,7 @@ label ending0:
     p "I want to know... will you be loyal to me?"
     hide princess_disapproving
     menu:
-        "Choice:"
+        "Choice:":
             "Kneel":
                 jump ending3
             "Face her":
