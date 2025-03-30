@@ -20,8 +20,8 @@
     image cg_princess_on_throne_v2 = "SliceOfJamCGThroneKill.png"
 
     # Assassin sprites
-    image assassin_neutral = ""
-    image assassin_fearful = ""
+    image assassin_neutral = "assassin_neutral.png"
+    image assassin_fearful = "assassin_fearful.png"
 
     # Princess sprites 
     image princess_neutral = "princess_neutral.png"
@@ -51,7 +51,7 @@ label start:
 # --------------------------
 label task1:
     scene bg_princess_room_day
-    centered "Task 1 – Introduction"
+    centered "Day 1"
     "A neatly written letter is left in the Princess’ room when you arrive. It’s addressed to you."
     menu:
             "Read Letter":
@@ -114,7 +114,7 @@ label task1_ignore:
 # --------------------------
 label task2_intro:
     scene bg_black
-    "Task 2 – Introduction"
+    "Day 2"
     "You wake up to the call of your Captain, telling you to report to the Princess’ room at once."
     "Tossing on your uniform, you rush to the Princess’ bedroom."
     scene bg_princess_room_day
@@ -151,8 +151,8 @@ label task2_stay:
     show princess_neutral at center
     p "Or at least, I hope so…"
     hide princess_neutral
-    p "Either way, your presence was a great comfort to me. Even if the peasantry does not approve of my choices, I feel as though I am not alone."
     show princess_cheerful at center
+    p "Either way, your presence was a great comfort to me. Even if the peasantry does not approve of my choices, I feel as though I am not alone."
     p "Thank you."
     hide princess_cheerful
     jump task3_intro
@@ -186,7 +186,7 @@ label task3_intro:
 # --------------------------
 label task4_intro:
     scene bg_black
-    "Task 4 – Introduction"
+    "Day 4"
     "There is never truly peace in the palace, but lately the chaos has been more intense."
     "Being the escort knight of Princess Primrose, you soon learn that she and a noble have been feuding. While she claims he’s undermined her authority, he denies it."
     "It’s inevitable that you will be drawn into the conflict."
@@ -240,7 +240,7 @@ label task4_refuse:
 # --------------------------
 label task5_intro:
     scene bg_black
-    "Task 5 – Introduction"
+    "Day 5"
     "Unrest has become the norm. Nights are rough as you see the Princess tired from her duties—and you, too, feel the strain."
     "Yet your troubled sleep brings vivid dreams. In one, you see Princess Primrose seated on a throne."
     "You approach the throne, kneeling a few paces before her."
@@ -334,7 +334,7 @@ label task5_ignore:
 # --------------------------
 label task6_intro:
     scene bg_black
-    "Task 6 – Introduction"
+    "Day 6"
     "The weight of recent events grows heavier. Unrest simmers in the streets, patrols tighten around the palace, and whispered conversations among the nobles turn grave."
     "Even sleep feels like a luxury now. With your armor and sword at the ready, you roam the palace, ever vigilant."
     "Then one night, a shadowy figure in a cloak slips silently through the corridors toward the Princess’ bedroom. You rush forward."
@@ -424,7 +424,7 @@ label task6_arrest:
 # --------------------------
 label task7_intro:
     scene bg_black
-    "Task 7 – Introduction"
+    "Day 7"
     "Once again, you find the Princess’ room empty. It’s become routine—but you always check for a letter addressed to you."
     scene bg_princess_room_day
     l "Dearest Hawthorn,"
