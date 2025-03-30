@@ -220,7 +220,8 @@ label task3_head_out:
     "She sends you a warm smile, before you bow to her and leave." 
     hide princess_neutral
     show princess_cheerful at center
-    "You see her hold up the pelt, pleased at your offering." 
+    "You see her hold up the pelt, pleased at your offering."
+    jump task4_intro
 
 label task3_stay_home:
     scene bg_black
@@ -532,7 +533,7 @@ label task7_kill_king:
     show princess_cheerful at center
     p "Oh, my. Thank you!"
     hide princess_cheerful
-    show cg_princess_on_throne_v2 with dissolve
+    show cg_princess_on_throne with dissolve
     "She sits on the throne—it appears as though it has always belonged to her. This is her rightful place."
     "You kneel."
     jump ending3
@@ -556,7 +557,7 @@ label task7_refuse:
     show princess_bloodied at center
     p "Move aside."
     hide princess_bloodied
-    show cg_princess_on_throne with dissolve
+    show cg_princess_on_throne_v2 with dissolve
     p "Hawthorn, I thought you would be more loyal than this."
     jump determine_ending
 
