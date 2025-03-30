@@ -1,4 +1,4 @@
-Sun Mar 30 18:28:00 2025
+Sun Mar 30 18:33:50 2025
 macOS-10.16-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
@@ -32,7 +32,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.22s
+Interface start took 0.72s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1728, 1117)
