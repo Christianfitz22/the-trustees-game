@@ -126,9 +126,9 @@ label task2_intro:
     scene bg_princess_room_day
     show princess_neutral at center
     p "Oh, Hawthorn, you're here…"
-    hide princess_neutral
     p "I've drafted up a few new policies for the populace, but it looks like they weren't received well."
     p "Thankfully, it seems we can control the situation since it wasn’t actually enacted yet…"
+    hide princess_neutral
     show princess_disapproving at center
     p "It's a necessary change! The backlash is all because of a misunderstanding."
     hide princess_disapproving
