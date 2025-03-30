@@ -248,7 +248,7 @@ label task4_intro:
     scene bg_black
     centered "Day 4"
     "There is never truly peace in the palace, but lately the chaos has been more intense."
-    "Being the escort knight of Princess Primrose, you soon learn that she and a noble have been feuding. While she claims he’s undermined her authority, he denies it."
+    "Being the escort knight of Princess Primrose, you soon learn that she and a noble have been feuding. While she claims he’s undermined her authority, she denies it."
     "It’s inevitable that you will be drawn into the conflict."
     scene bg_princess_room_day
     l "Dearest Hawthorn,"
@@ -400,8 +400,8 @@ label task6_intro:
     scene bg_princess_room_night
     show assassin_neutral at right
     show princess_disapproving at left
-    "You catch the intruder just as he stands over the sleeping Princess with a dagger in hand."
-    "You shout, startling the Princess awake and catching the assassin off guard. Before he can strike again, you intercept her dagger with your sword."
+    "You catch the intruder just as she stands over the sleeping Princess with a dagger in hand."
+    "You shout, startling the Princess awake and catching the assassin off guard. Before she can strike again, you intercept her dagger with your sword."
     "A duel ensues, the clashing of metal filling the room as the Princess watches with a detached air."
     hide assassin_neutral
     hide princess_disapproving
@@ -420,6 +420,7 @@ label task6_intro:
     hide princess_disapproving
     show assassin_neutral at center
     a "She lies, knight. She commands death for her own pride. She betrays the good of her people to consolidate her power. There is no line she will not cross."
+    hide assassin_neutral
     show princess_disapproving at center
     p "That's enough, villain."
     p "Even your words make you an enemy. But to kill me in my sleep? You truly are the worst type of scum."
