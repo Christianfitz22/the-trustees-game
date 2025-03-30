@@ -454,7 +454,7 @@ label task6_execute:
     h "… What should we do about the assassin?"
     show princess_cheerful at center
     p "Don’t worry. I’ll send for a maid to clean up the mess. You should get some rest."
-      "You look at the assassin’s body. Calling it a mess seems dismissive. Besides, another thought nags at you…"
+    "You look at the assassin’s body. Calling it a mess seems dismissive. Besides, another thought nags at you…"
     hide princess_cheerful
     h "Isn’t this against the law? I was supposed to bring her to court."
     show princess_cheerful at center
