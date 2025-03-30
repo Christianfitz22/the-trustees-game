@@ -166,9 +166,9 @@ label task2_stay:
 label task2_ignore:
     show princess_disapproving at center
     p "Are you really leaving me alone in my time of need?"
-    hide princess_disapproving
     p "I just need you as support! I haven’t asked you for much…"
     p "Goodness! You are just like the peasantry."
+    hide princess_disapproving
     show princess_neutral at center
     p "I shouldn’t have expected better of you, or them."
     hide princess_neutral
@@ -382,9 +382,11 @@ label task5_ignore:
     show princess_disapproving at center
     p "The rebellion is growing as we speak. Why didn’t you head out when I told you to?"
     hide princess_disapproving
+    show princess_neutral at center
     p "Now there’s no way we can easily deal with a mob this size!"
     p "Argh! This is why you should have listened to me."
     p "…"
+    hide princess_neutral
     show princess_disapproving at center
     p "Go away. I don’t want to see you right now."
     hide princess_disapproving
