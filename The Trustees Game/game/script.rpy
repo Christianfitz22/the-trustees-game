@@ -222,7 +222,7 @@ label task3_head_out:
     show princess_cheerful at center
     "You see her hold up the pelt, pleased at your offering." 
 
-label task3_stay_home
+label task3_stay_home:
     scene bg_black
     "That sounds dangerous, you decide, and so you stay at home. The Princess is too busy to check if you went, you think, so there’s no danger in skipping!"
     "From what you hear, it was a good call. Many of the knights who headed out came back injured, though the beast was successfully slain." 
