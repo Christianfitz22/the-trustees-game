@@ -18,7 +18,6 @@
     image cg_knight_duel = "knightfighting.png"
     image cg_princess_on_throne = "SliceOfJamCGThroneRefuse.png"
     image cg_princess_on_throne_v2 = "SliceOfJamCGThroneKill.png"
-    image cg_princess_stabbing = ""
 
     # Assassin sprites
     image assassin_neutral = ""
@@ -55,7 +54,6 @@ label task1:
     centered "Task 1 – Introduction"
     "A neatly written letter is left in the Princess’ room when you arrive. It’s addressed to you."
     menu:
-        "Choice:"
             "Read Letter":
                 jump task1_read_letter
 
@@ -67,7 +65,6 @@ label task1_read_letter:
     l "Yours, Princess Primrose."
     l "It’s signed off with the Princess’ personal seal."
     menu:
-        "Choice:":
             "Go to the Garden":
                 jump task1_garden
             "Ignore her command":
@@ -133,7 +130,6 @@ label task2_intro:
     p "…Might you stay with me while I deal with the situation?"
     hide princess_neutral
     menu:
-        "Choice:":
             "Stay With Her":
                 jump task2_stay
             "Ignore Her Request":
@@ -201,7 +197,6 @@ label task4_intro:
     l "We have agreed on a duel to settle this honorably. As my escort knight, I have nominated you to represent me. I should hope you will not disappoint."
     l "Yours, Princess Primrose."
     menu:
-        "Choice:":
             "Accept the Nomination":
                 jump task4_accept
             "Refuse the Nomination":
@@ -275,7 +270,6 @@ label task5_intro:
     p "For the good of the Kingdom."
     hide princess_neutral
     menu:
-        "Choice:":
             "Quell the rebellion":
                 jump task5_quell
             "Ignore the rebellion":
@@ -369,13 +363,12 @@ label task6_intro:
     show princess_neutral at center
     p "Please."
     hide princess_neutral
-    menu:
-        "Choice:":
-            "Execute the Assassin":
-                jump task6_execute
-            "Arrest the Assassin":
-                $ no_count += 1
-                jump task6_arrest
+    menu:            
+        "Execute the Assassin":
+            jump task6_execute
+        "Arrest the Assassin":
+            $ no_count += 1
+            jump task6_arrest
 
 label task6_execute:
     scene bg_black
@@ -446,7 +439,6 @@ label task7_intro:
     p "There is much I need to do. And for that, I need the throne."
     p "Kill the king, my knight."
     menu:
-        "Choice:":
             "Kill the King":
                 jump task7_kill_king
             "Refuse":
@@ -515,7 +507,6 @@ label ending0:
     p "I want to know... will you be loyal to me?"
     hide princess_disapproving
     menu:
-        "Choice:":
             "Kneel":
                 jump ending3
             "Face her":
@@ -560,7 +551,28 @@ label ending2:
 
 label ending3:
     scene bg_black
-    h "Les bien"
+    "The King is dead, and so Princess Primrose is now the rightful ruler of the Kingdom."
+    "You are glad to have been able to serve her all this time… but you worry—does she need you anymore?"
+    "As a Queen, she will have leagues of loyal knights. You are just one of them."
+    
+    scene bg_throne_room
     show princess_cheerful at center
-    p "WE are WOMEN and WE are GAY"
+    p "Hawthorn, my loyal knight. I couldn’t have done this without you. You may stand."
+    p "What sort of reward would you like? Riches, a title?"
+    
+    menu:
+            "Nothing.":
+                pass
+            "You.":
+                pass
+
+    "Finally, you stand, walking closer to the Princess as she sits on her throne. She smiles, and it is like the sun."
+    "You hesitate."
+    p "I see. Well, come closer, then. You will have the highest honor in the Kingdom, after me."
+    
+    show cg_gay with dissolve
+    p "My lover."
+    
+    window hide
+    pause 3
     return
