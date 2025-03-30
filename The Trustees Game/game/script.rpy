@@ -280,8 +280,11 @@ label task4_accept:
     p "I can't ask for a better escort knight."
     hide princess_cheerful
     h "…"
+    "You still feel sick to your stomach."
+    show princess_neutral at center
     p "Your opponent's death has cost more than victory—it means my rival has lost face before the entire court."
     p "You have my thanks, my knight."
+    hide princess_neutral
     jump task5_intro
 
 label task4_refuse:
