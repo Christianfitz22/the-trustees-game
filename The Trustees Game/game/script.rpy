@@ -31,7 +31,7 @@
     image princess_bloodied = "princess_bloodied.png"
 
     # Hawthorn
-    image hawthron_netural = "knight_neutral.png"
+    image hawthorn_netural = "knight_neutral.png"
 
     # Character definitions
     define p = Character("Princess Primrose")
@@ -44,18 +44,19 @@ label start:
     $ no_task1 = False
 
     scene bg_black
-    show hawthron_netural at center
+    show hawthorn_netural at center
     "You are Hawthorn, a knight in the employ of Princess Primrose. With your skills, and a little bit of luck, you’ve been appointed as her personal knight."
     "Princess Primrose is considered a beloved Princess by the people, but you’ve never spoken to her before. It might be a little nerve wracking, but she’s the only heir to this Kingdom. Better not mess this up!"
-    hide hawthron_netural
+    hide hawthorn_netural
     jump task1
 
 # --------------------------
 # Task 1
 # --------------------------
 label task1:
-    scene bg_princess_room_day
+    scene bg_black
     centered "Day 1"
+    scene bg_princess_room_day
     "A neatly written letter is left in the Princess’ room when you arrive. It’s addressed to you."
     menu:
             "Read Letter":
@@ -119,7 +120,7 @@ label task1_ignore:
 # --------------------------
 label task2_intro:
     scene bg_black
-    "Day 2"
+    centered "Day 2"
     "You wake up to the call of your Captain, telling you to report to the Princess’ room at once."
     "Tossing on your uniform, you rush to the Princess’ bedroom."
     scene bg_princess_room_day
@@ -245,7 +246,7 @@ lable task3_stay_home
 # --------------------------
 label task4_intro:
     scene bg_black
-    "Day 4" at center
+    centered "Day 4"
     "There is never truly peace in the palace, but lately the chaos has been more intense."
     "Being the escort knight of Princess Primrose, you soon learn that she and a noble have been feuding. While she claims he’s undermined her authority, he denies it."
     "It’s inevitable that you will be drawn into the conflict."
@@ -298,7 +299,7 @@ label task4_refuse:
 # --------------------------
 label task5_intro:
     scene bg_black
-    "Day 5"
+    centered "Day 5"
     "Unrest has become the norm. Nights are rough as you see the Princess tired from her duties—and you, too, feel the strain."
     "Yet your troubled sleep brings vivid dreams. In one, you see Princess Primrose seated on a throne."
     "You approach the throne, kneeling a few paces before her."
@@ -394,7 +395,7 @@ label task5_ignore:
 # --------------------------
 label task6_intro:
     scene bg_black
-    "Day 6"
+    centered "Day 6"
     "The weight of recent events grows heavier. Unrest simmers in the streets, patrols tighten around the palace, and whispered conversations among the nobles turn grave."
     "Even sleep feels like a luxury now. With your armor and sword at the ready, you roam the palace, ever vigilant."
     "Then one night, a shadowy figure in a cloak slips silently through the corridors toward the Princess’ bedroom. You rush forward."
@@ -483,7 +484,7 @@ label task6_arrest:
 # --------------------------
 label task7_intro:
     scene bg_black
-    "Day 7"
+    centered "Day 7"
     "Once again, you find the Princess’ room empty. It’s become routine—but you always check for a letter addressed to you."
     scene bg_princess_room_day
     l "Dearest Hawthorn,"
@@ -492,7 +493,7 @@ label task7_intro:
     "Concerned, you rush to the Throne Room."
     scene bg_throne_room
     show princess_neutral at center
-    p "Hawthorn, you are loyal to me, right?
+    p "Hawthorn, you are loyal to me, right?"
     hide princess_neutral
     p "This is the most important task I have for you so far."
     p "There is much I need to do. And for that, I need the throne."
