@@ -13,7 +13,7 @@
     image bg_throne_room_night = "SoJ2025ThroneRoomNightDesaturated.png"
 
     # CG Images
-    image cg_garden = "SliceOfJamCGGarden.png"  # Fixed typo here
+    image cg_garden = "SliceOfJamCGGarden.png"
     image cg_gay = "CG.png"
     image cg_knight_duel = "knightfighting.png"
     image cg_princess_on_throne = "SliceOfJamCGThroneRefuse.png"
@@ -28,7 +28,7 @@
     image princess_cheerful = "princess_happy.png"
     image princess_disapproving = "princess_disapproving.png"
     image princess_knife = "princess_knife.png"
-    image princess_bloodied = "princess_bloodied.png"
+    image princess_bloodied = "princess_knife_bloodied.png"
 
     # Hawthorn
     image hawthorn_netural = "knight_neutral.png"
@@ -381,13 +381,9 @@ label task5_ignore:
     scene bg_princess_room_night
     show princess_disapproving at center
     p "The rebellion is growing as we speak. Why didn’t you head out when I told you to?"
-    hide princess_disapproving
-    show princess_neutral at center
     p "Now there’s no way we can easily deal with a mob this size!"
     p "Argh! This is why you should have listened to me."
     p "…"
-    hide princess_neutral
-    show princess_disapproving at center
     p "Go away. I don’t want to see you right now."
     hide princess_disapproving
     jump task6_intro
@@ -407,22 +403,28 @@ label task6_intro:
     "You catch the intruder just as he stands over the sleeping Princess with a dagger in hand."
     "You shout, startling the Princess awake and catching the assassin off guard. Before he can strike again, you intercept her dagger with your sword."
     "A duel ensues, the clashing of metal filling the room as the Princess watches with a detached air."
-    show assassin_fearful at right
+    hide assassin_neutral
+    hide princess_disapproving
+    show assassin_fearful at center
     "At last, your training and faith prove strong enough—you triumph over the intruder."
     "The assassin lies disarmed and injured in a corner as the Princess slowly approaches."
-    show princess_bloodied at center
+    hide assassin_fearful
+    show princess_sad at center
     p "Hawthorn… you saved me."
-    hide princess_bloodied
+    hide princess_sad
+    show assassin_neutral at center
     a "If only you hadn’t… you keep letting that monarch live and the crimes against this kingdom's people will never end."
+    hide assassin_neutral
     show princess_disapproving at center
     p "How could you spit such treasonous words? Everything I do, I do for this kingdom."
     hide princess_disapproving
+    show assassin_neutral at center
     a "She lies, knight. She commands death for her own pride. She betrays the good of her people to consolidate her power. There is no line she will not cross."
     show princess_disapproving at center
     p "That's enough, villain."
-    hide princess_disapproving
     p "Even your words make you an enemy. But to kill me in my sleep? You truly are the worst type of scum."
     p "Hawthorn, kill her."
+    hide princess_disapproving
     show princess_neutral at center
     p "Please."
     hide princess_neutral
@@ -472,13 +474,14 @@ label task6_arrest:
     h "But the law…"
     show princess_neutral at center
     p "You would be following the law. Just a little… faster."
+    hide princess_neutral
     show princess_disapproving at center
     p "It would have been better if I didn’t have to worry about her escaping and attacking me again."
-    show princess_neutral at center
     p "Continue your patrol."
-    show princess_bloodied at center
+    hide princess_disapproving
+    show princess_sad
     p "I hope I can get some sleep tonight…"
-    hide princess_bloodied
+    hide princess_sad
     jump task7_intro
 
 # --------------------------
@@ -496,10 +499,10 @@ label task7_intro:
     scene bg_throne_room
     show princess_neutral at center
     p "Hawthorn, you are loyal to me, right?"
-    hide princess_neutral
     p "This is the most important task I have for you so far."
     p "There is much I need to do. And for that, I need the throne."
     p "Kill the king, my knight."
+    hide princess_neutral
     menu:
             "Kill the King":
                 jump task7_kill_king
