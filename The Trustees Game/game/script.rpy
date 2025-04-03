@@ -59,7 +59,7 @@ label start:
 # --------------------------
 label task1:
     scene bg_black
-    centered "Day 1"
+    "Day 1"
     scene bg_princess_room_day
     "A neatly written letter is left in the Princess’ room when you arrive. It’s addressed to you."
     menu:
@@ -124,7 +124,7 @@ label task1_ignore:
 # --------------------------
 label task2_intro:
     scene bg_black
-    centered "Day 2"
+    "Day 2"
     "You wake up to the call of your Captain, telling you to report to the Princess’ room at once."
     "Tossing on your uniform, you rush to the Princess’ bedroom."
     scene bg_princess_room_day
@@ -189,6 +189,7 @@ label task2_ignore:
 # --------------------------
 label task3_intro:
     scene bg_black
+    "Day 3"
     "Even though you’ve gotten more accustomed to being called on at random by the Princess, today there is no one in her bedroom when you arrive."
     "Not that it is strange, after all. She could just be at court, speaking with friends, or any number of activities."
     "But, just like your first day on the job, there is a letter addressed to you on her desk."
@@ -251,7 +252,7 @@ label task3_stay_home:
 # --------------------------
 label task4_intro:
     scene bg_black
-    centered "Day 4"
+    "Day 4"
     "There is never truly peace in the palace, but lately the chaos has been more intense."
     "Being the escort knight of Princess Primrose, you soon learn that she and a noble have been feuding. While she claims he’s undermined her authority, she denies it."
     "It’s inevitable that you will be drawn into the conflict."
@@ -307,7 +308,7 @@ label task4_refuse:
 # --------------------------
 label task5_intro:
     scene bg_black
-    centered "Day 5"
+    "Day 5"
     "Unrest has become the norm. Nights are rough as you see the Princess tired from her duties—and you, too, feel the strain."
     "Yet your troubled sleep brings vivid dreams. In one, you see Princess Primrose seated on a throne."
     "You approach the throne, kneeling a few paces before her."
@@ -401,7 +402,7 @@ label task5_ignore:
 # --------------------------
 label task6_intro:
     scene bg_black
-    centered "Day 6"
+    "Day 6"
     "The weight of recent events grows heavier. Unrest simmers in the streets, patrols tighten around the palace, and whispered conversations among the nobles turn grave."
     "Even sleep feels like a luxury now. With your armor and sword at the ready, you roam the palace, ever vigilant."
     "Then one night, a shadowy figure in a cloak slips silently through the corridors toward the Princess’ bedroom. You rush forward."
@@ -502,7 +503,7 @@ label task6_arrest:
 # --------------------------
 label task7_intro:
     scene bg_black
-    centered "Day 7"
+    "Day 7"
     "Once again, you find the Princess’ room empty. It’s become routine—but you always check for a letter addressed to you."
     scene bg_princess_room_day
     l "Dearest Hawthorn,"
