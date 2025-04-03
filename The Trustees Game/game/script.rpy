@@ -18,6 +18,7 @@
     image cg_knight_duel = "knightfighting.png"
     image cg_princess_on_throne_v2 = "SliceOfJamCGThroneRefuse.png"
     image cg_princess_on_throne = "SliceOfJamCGThroneKill.png"
+    image cg_stap = "CG_stab.png"
 
     # Assassin sprites
     image assassin_neutral = "assassin_neutral.png"
@@ -38,6 +39,9 @@
     define h = Character("Hawthorn")
     define l = Character("Letter")
     define a = Character("Assassin")
+
+    # Red flash
+    $ flash = Fade(.25, 0, .75, color="#d4382a")
 
 label start:
     $ no_count = 0
@@ -598,24 +602,26 @@ label ending1:
 label ending2:
     scene bg_black
     "You’ve come to the decision that you cannot continue to serve Princess Primrose. For whatever reason, her commands simply don’t sit well with you."
-    "Even though you know this is treason, you approach the throne room, hand on the hilt on your sword."
-    scene bg_throne_room_night
+    "Even though you know this is treason, you approach her room, hand on the hilt on your sword."
+    scene bg_princess_room_night
     show princess_neutral at center
     p "Hawthorn! What are you doing here at this time of night?"
     hide princess_neutral
-    "She looks at you in surprise."
+    "She opens the door to you, looking at you in surprise."
     show princess_neutral at center
     p "Is something the matter?"
     hide princess_neutral
     "You steel your nerves, taking one good last look at her."
-    scene bg_black
-    "..."
-    show cg_princess_stabbing with dissolve
+    with flash
+    show princess_bloodied at center
+    "There's a sharp pain in your chest."
+    hide princess_bloodied at center
+    show cg_stab with dissolve
     p "Hawthorn… surely you weren’t trying to hurt me, were you?"
     h "…"
     "You can't muster a word, blood loss clouding your vision."
     hide cg_princess_stabbing
-    scene bg_throne_room_night
+    scene bg_princess_room_night
     show princess_bloodied at center
     p "Good night, my knight."
     hide princess_bloodied
