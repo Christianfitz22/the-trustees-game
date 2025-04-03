@@ -204,6 +204,7 @@ label task3_intro:
         "Head Out With the Squadron":
             jump task3_head_out
         "Stay At Home":
+            $ no_count += 1
             jump task3_stay_home
 
 label task3_head_out:
@@ -302,7 +303,11 @@ label task4_refuse:
     show princess_disapproving at center
     p "Where were you, Hawthorn? You are my escort knight—meant to represent me!"
     hide princess_disapproving
-    jump task5_intro
+
+    if no_count >= 3:
+        jump ending2
+    else:
+        jump task5_intro
 
 # --------------------------
 # Task 5
@@ -344,6 +349,7 @@ label task5_intro:
             "Quell the rebellion":
                 jump task5_quell
             "Ignore the rebellion":
+                $ no_count += 1
                 jump task5_ignore
 
 label task5_quell:
@@ -396,7 +402,11 @@ label task5_ignore:
     p "…"
     p "Go away. I don’t want to see you right now."
     hide princess_disapproving
-    jump task6_intro
+
+    if no_count >= 3:
+        jump ending2
+    else:
+        jump task6_intro
 
 # --------------------------
 # Task 6
@@ -497,7 +507,11 @@ label task6_arrest:
     show princess_sad
     p "I hope I can get some sleep tonight…"
     hide princess_sad
-    jump task7_intro
+
+    if no_count >= 3:
+        jump ending2
+    else:
+        jump task7_intro
 
 # --------------------------
 # Task 7
@@ -604,10 +618,10 @@ label ending1:
 label ending2:
     scene bg_black
     "You’ve come to the decision that you cannot continue to serve Princess Primrose. For whatever reason, her commands simply don’t sit well with you."
-    "Even though you know this is treason, you approach her room, hand on the hilt on your sword."
+    "Even though you know this is treason, you approach her room that night, hand on the hilt on your sword."
     scene bg_princess_room_night
     show princess_neutral at center
-    p "Hawthorn! What are you doing here at this time of night?"
+    p "Hawthorn! What are you doing here so late at night?"
     hide princess_neutral
     "She opens the door to you, looking at you in surprise."
     show princess_neutral at center
