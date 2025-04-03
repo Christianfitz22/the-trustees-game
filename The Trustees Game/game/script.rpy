@@ -570,6 +570,7 @@ label task7_refuse:
     show princess_knife at center
     p "I suppose I have to do everything myself."
     hide princess_knife
+    with flash
     show princess_bloodied at center
     p "Long live the King, and all that. Hawthorn! Clean this up."
     hide princess_bloodied
