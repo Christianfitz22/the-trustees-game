@@ -542,8 +542,8 @@ label task7_intro:
 
 label task7_kill_king:
     scene bg_black
-    "There is no need to hesitate. You rush to the throne, draw your sword, and in one swift motion, the King's head is severed cleanly."
-
+    "There is no need to hesitate. Running up to the throne, you draw your sword. The King doesn’t even have a chance to be surprised- you sever his head cleanly off his shoulders."
+    with flash
     "He is no more. It almost feels too easy."
     scene bg_throne_room
     show princess_neutral at center
