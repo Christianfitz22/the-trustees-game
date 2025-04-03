@@ -39,6 +39,7 @@
     define h = Character("Hawthorn")
     define l = Character("Letter")
     define a = Character("Assassin")
+    define m = Character("Messenger")
 
     # Red flash
     $ flash = Fade(.25, 0, .75, color="#d4382a")
@@ -316,7 +317,7 @@ label task5_intro:
     "As you follow her command, she covers her soft laugh as you see her beautiful face smile down upon you. Just as she opens her mouth to speak, a glint catches the corner of your eye —"
     "BANG BANG BANG!"
     "Your eyes snap open."
-    "Messenger (no sprite): Knight Hawthorn! You have an urgent summons from the Princess!"
+    m "Knight Hawthorn! You have an urgent summons from the Princess!"
     "Instinctively, you toss the bed sheets aside and start putting on your gear, replaying what little you remember of your dream over and over in your mind."
     scene bg_princess_room_day
     show  princess_sad at center
