@@ -11,6 +11,7 @@
     image bg_garden = "SoJ2025GardenDayDesaturated.png"
     image bg_throne_room = "SoJ2025ThroneRoomBrightDesaturated.png"
     image bg_throne_room_night = "SoJ2025ThroneRoomNightDesaturated.png"
+    image bg_forest_with_beast = "SoJ2025ForestWithBeast.png"
 
     # CG Images
     image cg_garden = "SliceOfJamCGGarden.png"
@@ -208,7 +209,7 @@ label task3_intro:
             jump task3_stay_home
 
 label task3_head_out:
-    scene bg_black
+    scene bg_forest_with_beast
     "This is what you’ve been training for! Heading out with the squadron, you feel as though you are making a difference." 
     "The fight is difficult, but not impossible. With your squadron at your side, you are able to pierce the heart of the beast after a struggle."
     "In order to prove your victory to the Princess, you take the pelt of the beast as your prize."
