@@ -619,7 +619,7 @@ label ending0:
             "Kneel":
                 jump ending3
             "Face her":
-                music stop fadeout 3.0
+                stop music fadeout 3.0
                 "You cannot accept her as your Queen. You must take some action…"
                 "However, you need to prepare yourself first. So you bow."
                 "Hopefully it’s enough to convince her."
