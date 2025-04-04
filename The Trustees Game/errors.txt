@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 117: end of line expected.
+    music play "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
+                                          ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Fri Apr  4 13:43:26 2025

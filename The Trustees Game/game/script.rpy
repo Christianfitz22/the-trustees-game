@@ -19,7 +19,7 @@
     image cg_knight_duel = "knightfighting.png"
     image cg_princess_on_throne_v2 = "SliceOfJamCGThroneRefuse.png"
     image cg_princess_on_throne = "SliceOfJamCGThroneKill.png"
-    image cg_stap = "CG_stab.png"
+    image cg_stab = "CG_stab.png"
 
     # Assassin sprites
     image assassin_neutral = "assassin_neutral.png"
@@ -114,6 +114,7 @@ label task1_ignore:
     "Since it’s a direct command, you suppose you can’t ignore her this time."
     scene bg_princess_room_night
     show princess_disapproving at center
+    play music "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
     p "Where in the world were you? Did you not read the letter?"
     p "I cannot believe that my escort knight would be so flippant! What if I had been in danger?"
     p "It was not even that difficult of a task! Butler! I require a new escort knight at once."
@@ -171,6 +172,7 @@ label task2_stay:
 
 label task2_ignore:
     show princess_disapproving at center
+    play music "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
     p "Are you really leaving me alone in my time of need?"
     p "I just need you as support! I haven’t asked you for much…"
     p "Goodness! You are just like the peasantry."
@@ -184,6 +186,7 @@ label task2_ignore:
     scene bg_black
     "You leave the Princess, as she huffs and dismisses you with a wave of her hand. There’s not much else you can do."
     "You return to your quarters, having no other orders for the day."
+    play music "audio/royalty-free.mp3" fadeout 1.0 fadein 1.0
     jump task3_intro
 
 # --------------------------
@@ -246,9 +249,10 @@ label task3_stay_home:
     p "Just kidding! I read the report. Your name is strangely missing."
     hide princess_cheerful
     show princess_disapproving at center
-    p "ithout your help, there were a great many casualties."
+    p "Without your help, there were a great many casualties."
     p "You have your responsibilities, you know. You were supposed to help the fight against the beast."
     p "Being my escort knight isn’t just fun and games."
+    jump task4_intro
 
 # --------------------------
 # Task 4
@@ -274,6 +278,7 @@ label task4_intro:
 
 label task4_accept:
     scene bg_black
+    play music "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
     "This is your duty—what an escort knight is for. With high expectations, you head to the duel grounds."
     show cg_knight_duel with dissolve
     "You and your opponent clash fiercely. You are better trained, better geared, and in higher spirits."
@@ -294,6 +299,7 @@ label task4_accept:
     p "Your opponent's death has cost more than victory—it means my rival has lost face before the entire court."
     p "You have my thanks, my knight."
     hide princess_neutral
+    play music "audio/royalty-free.mp3" fadeout 1.0 fadein 1.0
     jump task5_intro
 
 label task4_refuse:
@@ -355,6 +361,7 @@ label task5_intro:
 
 label task5_quell:
     scene bg_black
+    play music "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
     "How dare they! A rebellion was treason by definition, and it’s your job to bring such evildoers to justice."
     "You are Princess Primrose’s escort knight! You must stop all those who want to do her harm. And… well, you keep thinking back on your dream."
     "Leading the charge, you find the headquarters of those who dared to rise up against the Crown and bring them justice."
@@ -389,6 +396,7 @@ label task5_quell:
     show princess_cheerful at center
     p "The insurgents got what they deserved."
     hide princess_cheerful
+    play music "audio/royalty-free.mp3" fadeout 1.0 fadein 1.0
     jump task6_intro
 
 label task5_ignore:
@@ -421,6 +429,7 @@ label task6_intro:
     scene bg_princess_room_night
     show assassin_neutral at right
     show princess_disapproving at left
+    play music "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
     "You catch the intruder just as she stands over the sleeping Princess with a dagger in hand."
     "You shout, startling the Princess awake and catching the assassin off guard. Before she can strike again, you intercept her dagger with your sword."
     "A duel ensues, the clashing of metal filling the room as the Princess watches with a detached air."
@@ -519,6 +528,7 @@ label task6_arrest:
 # --------------------------
 label task7_intro:
     scene bg_black
+    play music "audio/royalty-free.mp3" fadeout 1.0 fadein 1.0
     "Day 7"
     "Once again, you find the Princess’ room empty. It’s become routine—but you always check for a letter addressed to you."
     scene bg_princess_room_day
@@ -531,8 +541,10 @@ label task7_intro:
     p "Hawthorn, you are loyal to me, right?"
     p "This is the most important task I have for you so far."
     p "There is much I need to do. And for that, I need the throne."
+    stop music
     p "Kill the king, my knight."
     hide princess_neutral
+    play music "audio/heartbeat-final.mp3"
     menu:
             "Kill the King":
                 jump task7_kill_king
@@ -542,6 +554,8 @@ label task7_intro:
 
 label task7_kill_king:
     scene bg_black
+    stop music
+    play music "audio/slow-bach-roll.mp3" fadein 25.0
     "There is no need to hesitate. Running up to the throne, you draw your sword. The King doesn’t even have a chance to be surprised- you sever his head cleanly off his shoulders."
     with flash
     "He is no more. It almost feels too easy."
@@ -561,6 +575,7 @@ label task7_kill_king:
 
 label task7_refuse:
     scene bg_black
+    play music "audio/slow-bach-roll.mp3" fadein 25.0
     "Kill the King? Impossible. Though loyal to the Princess, your loyalty to the Kingdom stands firm."
     "Regicide goes against everything you stand for. You make your disapproval known with your stance."
     scene bg_throne_room
@@ -604,6 +619,7 @@ label ending0:
             "Kneel":
                 jump ending3
             "Face her":
+                music stop fadeout 3.0
                 "You cannot accept her as your Queen. You must take some action…"
                 "However, you need to prepare yourself first. So you bow."
                 "Hopefully it’s enough to convince her."
@@ -619,6 +635,7 @@ label ending1:
 
 label ending2:
     scene bg_black
+    play music "audio/slow-bach-roll.mp3" fadeout 1.0 fadein 1.0
     "You’ve come to the decision that you cannot continue to serve Princess Primrose. For whatever reason, her commands simply don’t sit well with you."
     "Even though you know this is treason, you approach her room that night, hand on the hilt on your sword."
     scene bg_princess_room_night
@@ -638,15 +655,17 @@ label ending2:
     p "Hawthorn… surely you weren’t trying to hurt me, were you?"
     h "…"
     "You can't muster a word, blood loss clouding your vision."
-    hide cg_princess_stabbing
+    hide cg_stab
     scene bg_princess_room_night
     show princess_bloodied at center
+    stop music
     p "Good night, my knight."
     hide princess_bloodied
     return
 
 label ending3:
     scene bg_black
+    play music "audio/royalty-free.mp3" fadeout 3.0 fadein 1.0
     "The King is dead, and so Princess Primrose is now the rightful ruler of the Kingdom."
     "You are glad to have been able to serve her all this time… but you worry—does she need you anymore?"
     "As a Queen, she will have leagues of loyal knights. You are just one of them."
